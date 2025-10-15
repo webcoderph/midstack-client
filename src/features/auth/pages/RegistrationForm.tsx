@@ -71,6 +71,7 @@ export const RegisterForm: FC = () => {
         />
         <button
           onClick={handleRegister}
+          disabled={isPending}
           className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-700 cursor-pointer"
         >
           {isPending ? "Registering..." : "Register"}

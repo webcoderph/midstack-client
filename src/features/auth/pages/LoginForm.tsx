@@ -6,14 +6,19 @@ export const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [isPending, setIsPending] = useState(false);
 
   const handleLogin = async () => {
+    if (isPending) return; // Prevent multiple submissions
     try {
       setError(null);
+      setIsPending(true);
       await login(email, password);
+      setIsPending(false);
       window.location.href = "/";
     } catch {
       setError("Invalid credentials");
+      setIsPending(false);
     }
   };
 

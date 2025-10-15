@@ -54,6 +54,7 @@ export const ProfileView: FC<ProfileViewProps> = ({ user }) => {
           />
           <button
             onClick={handleSave}
+            disabled={isPending}
             className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-700 cursor-pointer mr-2"
           >
             {isPending ? 'Saving...' : 'Save' }
