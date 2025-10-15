@@ -11,8 +11,6 @@ export const DefaultLayout: React.FC = () => {
         <h1 className="text-3xl font-semibold text-gray-300">Midstack</h1>
         <nav className="space-x-4">
           <a href="/" className="text-gray-300 font-bold hover:text-gray-100">Home</a>
-          <a href="/profile" className="text-gray-300 font-bold hover:text-gray-100">Profile</a>
-          <a href="/settings" className="text-gray-300 font-bold hover:text-gray-100">Settings</a>
           {token ? (
             <button
               onClick={logout}
